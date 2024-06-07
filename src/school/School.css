@@ -1,0 +1,14 @@
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.School_contaner{
+    /* border: 2px solid red; */
+    width: auto;
+    min-height: 99.6vh;
+    background-color: rgb(219, 216, 214);
+}
+

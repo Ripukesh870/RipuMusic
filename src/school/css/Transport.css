@@ -1,0 +1,25 @@
+.transport_main{
+    /* border: 2px solid red; */
+    background-color: aliceblue;
+    /* margin: 10px; */
+}
+.transport_first_box{
+    border: 2px solid aliceblue;
+    height: 500px;
+    text-align: center;
+    /* width: 100%; */
+    background-image: url(../image/transbanner.jpg);
+    /* margin: 10px 0px; */
+}
+.transport_first_box h4{
+    /* position: absolute; */
+    /* border: 2px solid red; */
+    /* display: inline; */
+    margin-top: 13%;
+    font-size: 65px;
+    color: white;
+}
+.transport_second{
+    border: 2px solid red;
+    /* margin-bottom: 10px; */
+}

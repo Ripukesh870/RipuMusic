@@ -1,0 +1,13 @@
+.newadmition_contaner{
+    border: 2px solid red;
+    margin: 15px;
+    padding : 10px;
+    text-align: center;
+}
+
+.newadmition_form{
+    border: 2px solid red;
+    width: 60%;
+    margin: auto;
+    
+}

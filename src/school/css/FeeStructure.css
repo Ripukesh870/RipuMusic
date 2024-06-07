@@ -1,0 +1,27 @@
+.fee_structure{
+    /* border: 2px solid red; */
+    display: flex;
+    margin: 20px 0px;
+    padding: 10px 30px;
+}
+
+.fee_structure div{
+    width: 64%;
+}
+
+.fee_structure ul{
+    border: 2px solid red;
+    margin: 20px 1px;
+}
+.fee_structure ul li{
+    /* border: 2px solid red; */
+    margin: 10px 1px;
+}
+@media (max-width: 840px){
+    .fee_structure{
+        display: block;
+    }
+    .fee_structure div{
+        width: 100%;
+    }
+}
