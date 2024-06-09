@@ -1,0 +1,131 @@
+.spotify_app{
+    /* border: 2px solid red; */
+    display: flex;
+    background-color: #000000;
+    width: 100%;
+    height: 100vh;
+    padding: 10px 6px;
+}
+
+.spotify_app_section1{
+    /* border: 2px solid rgb(189, 39, 29); */
+    width: 25%;
+    height: 100%;
+}
+
+.spotify_app_section2{
+    /* border: 2px solid rgb(11, 216, 80); */
+    width: 75%;
+    height: 100%;
+    /* overflow: hidden; */
+}
+
+.spotify_app_section3{
+    /* border: 2px solid red; */
+    width: 20%;
+}
+.spotify_app_box{
+    /* border: 2px solid red; */
+    margin: 0px 3px;
+}
+.spotify_app_section11{
+    /* border: 2px solid red; */
+    background-color: #1f1e1e;
+    padding: 10px;
+    border-radius: 10px;
+    height: 13.5%;
+}
+.box1_btn{
+    display: block;
+    color: white;
+    font-size: 18px;
+    background-color: #1f1e1e;
+    border: none;
+    margin: 10px;
+    /* padding: 5px; */
+}
+.box1_btn:active{
+    font-weight: bold;
+    /* background-color: #817c7c; */
+}
+
+.spotify_app_section12{
+    /* border: 2px solid red; */
+    background-color: #1f1e1e;
+    color: white;
+    margin-top: 10px;
+    border-radius: 10px;
+    height: 85%;
+    padding: 10px;
+   
+    /* height: auto; */
+    justify-content: space-between;
+}
+
+.box1_btn1{
+    display: block;
+    color: white;
+    font-size: 17px;
+}
+.spotify_app_section121{
+    background-color: #1f1e1e;
+    color: white;
+    border-radius: 10px;
+    height: auto;
+   display: flex;
+    justify-content: space-between;
+}
+.box1_btn5{
+    cursor:wait;
+}
+
+.spotify_app_section122{
+    padding: 15px;
+    /* border: 2px solid red; */
+    border-radius: 10px;
+    background-color: #393737;
+    margin: 14px 0px;
+}
+.spotify_app_section122 p{
+    font-size: 13px;
+}
+.box1_btn6{
+    /* border: 2px solid red; */
+    padding: 5px 15px;
+    border-radius: 20px;
+    color: black;
+}
+
+.spotify_app_section2{
+    background-color: #1f1e1e;
+    color: white;
+}
+
+.spotify_navbar{
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 10px;
+}
+.nav_btn{
+    /* border: 2px solid red; */
+    margin: 0px 5px;
+    font-size: 16px;
+    padding: 5px 12px;
+    border-radius: 22px;
+}
+.navBtn1{
+    background-color: black;
+    color: rgb(255, 255, 255);
+}
+.arrow_btn{
+    padding: 5px 10px;
+    /* border: 2px solid red; */
+
+}
+.arrow{
+    background-color: black;
+    margin: 0px 7px;
+    border-radius: 20px;
+}
+

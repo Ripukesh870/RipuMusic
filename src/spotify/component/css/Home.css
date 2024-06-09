@@ -1,0 +1,113 @@
+.spotyfy_home{
+    /* border: 5px solid rgb(234, 21, 21); */
+    /* height: fit-content; */
+    /* overflow-y: scroll; */
+    /* box-sizing: border-box; */
+    padding: 10px;
+    /* height: 90vh; */
+}
+.home_btn{
+    /* border: 2px solid red; */
+    margin:10px 5px;
+    font-size: 14px;
+    padding: 2px 12px;
+    border-radius: 22px;
+   
+}
+.homeBtn1{
+    background-color: black;
+  
+
+}
+.home_btn{
+    background-color: #383737;
+    color: rgb(255, 255, 255);
+    /* border: 2px solid #383737; */
+    border: none;
+    box-shadow: 0px 0px 5pxpx #383737;
+}
+/* .spotyfy_home{
+    padding: 2px 8px;
+
+} */
+
+/* musix Section */
+.spotyfy_home_1{
+    /* border: 2px solid red; */
+    height: fit-content;
+}
+.spotyfy_home_1_h4{
+    /* border: 2px solid red; */
+    margin: 12px;
+}
+.spotyfy_home_11{
+    /* border: 2px solid red; */
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    height: 72vh;
+}
+
+.card{
+    overflow: hidden;
+    /* border: 2px solid red; */
+    margin: 10px auto;
+    height: 24rem;
+    background-color: rgb(23, 22, 22);
+    color: white;
+    /* padding: 5px 5px 10px 5px; */
+}
+
+.card:hover{
+    background-color: rgb(48, 46, 46);
+    box-shadow: 0px 0px 10px rgb(0, 0, 0);
+}
+/* .PlayCircle{
+    font-size: 45px;
+    cursor: pointer;
+} */
+.card-body{
+    text-wrap: nowrap;
+    overflow: hidden;
+    /* border: 2px solid red; */
+}
+.card-title{
+    font-size: 18px;
+   margin-right: 10px;
+}
+.card-text{
+    font-size: 14px;
+}
+.audio{
+    margin: 0;
+    padding: 0;
+}
+
+.Search{
+    /* border: 2px solid red; */
+    width: 110% ;
+    margin: 0px 0px;
+    padding: 0px 15px;
+    font-size: 19px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+}
+.search2{
+    display: flex;
+    border: 2px solid red;
+    border-radius: 20px;
+    padding: 0px 10px;
+    background-color: white;
+    display: none;
+}
+.search1{
+    margin: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.ser{
+
+
+}
