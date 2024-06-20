@@ -5,7 +5,7 @@ import MusicSection from './MusicSection';
 function Home() {
     return (
         < >
-            <Navbar />
+        
             <div className='spotyfy_home'>
                 <div className='spotyfy_home1'>
                     <button className='home_btn slick-active'>All</button>
@@ -13,7 +13,7 @@ function Home() {
                     <button className='home_btn homeBtn1'> Prodcast</button>
                 </div>
                 <div className='abcd'>
-                <MusicSection/>
+                    <MusicSection />
                 </div>
                 
             </div>

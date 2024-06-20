@@ -9,7 +9,8 @@
 
 .spotify_app_section1{
     /* border: 2px solid rgb(189, 39, 29); */
-    width: 25%;
+    width: 26%;
+    /* min-width: 15%; */
     height: 100%;
 }
 
@@ -32,8 +33,9 @@
     /* border: 2px solid red; */
     background-color: #1f1e1e;
     padding: 10px;
+    /* padding-bottom: 20px; */
     border-radius: 10px;
-    height: 13.5%;
+    height: 16%;
 }
 .box1_btn{
     display: block;
@@ -55,7 +57,7 @@
     color: white;
     margin-top: 10px;
     border-radius: 10px;
-    height: 85%;
+    height: 82.7%;
     padding: 10px;
    
     /* height: auto; */
@@ -63,11 +65,13 @@
 }
 
 .box1_btn1{
+    /* border: 2px solid red; */
     display: block;
     color: white;
     font-size: 17px;
 }
 .spotify_app_section121{
+    /* border: 2px solid red; */
     background-color: #1f1e1e;
     color: white;
     border-radius: 10px;
@@ -76,7 +80,8 @@
     justify-content: space-between;
 }
 .box1_btn5{
-    cursor:wait;
+    /* border: 2px solid red; */
+    cursor:pointer;
 }
 
 .spotify_app_section122{
@@ -106,12 +111,13 @@
     display: flex;
     justify-content: space-between;
     padding: 15px 10px;
+    border-bottom: 2px solid rgb(74, 70, 70);
 }
 .nav_btn{
-    /* border: 2px solid red; */
-    margin: 0px 5px;
-    font-size: 16px;
-    padding: 5px 12px;
+    border: none;
+    margin: 3.5px 5px;
+    font-size: 18px;
+    padding: 5px 20px;
     border-radius: 22px;
 }
 .navBtn1{
@@ -119,13 +125,122 @@
     color: rgb(255, 255, 255);
 }
 .arrow_btn{
-    padding: 5px 10px;
+    padding: auto;
     /* border: 2px solid red; */
-
+    margin: 0px 10px;
 }
+
 .arrow{
     background-color: black;
-    margin: 0px 7px;
+    /* margin-top: 10px; */
+    margin: 10px 3px 0px 5px;
     border-radius: 20px;
 }
 
+.libraryMusic{
+    margin-top: -5px;
+    margin-right: 3px;
+    font-size: 29px;
+}
+
+@media (max-width: 1199px) {
+    .box1_btn1{
+        font-size: 14px;
+
+    }
+
+}
+@media (max-width: 1056px) {
+    .box1_btn1{
+        font-size: 16px;
+    }
+
+    .spotify_app_section1{
+        /* border: 2px solid rgb(189, 39, 29); */
+        width: 30%;
+        /* min-width: 15%; */
+        /* height: 100%; */
+    }
+    
+    .spotify_app_section2{
+        /* border: 2px solid rgb(11, 216, 80); */
+        width: 70%;
+        /* height: 100%; */
+        /* overflow: hidden; */
+    }
+}
+
+@media (max-width: 936px) {
+    .spotify_app_section1{
+        /* border: 2px solid rgb(189, 39, 29); */
+        width: 35%;
+        /* min-width: 15%; */
+        /* height: 100%; */
+    }
+    
+    .spotify_app_section2{
+        /* border: 2px solid rgb(11, 216, 80); */
+        width: 65%;
+        /* height: 100%; */
+        /* overflow: hidden; */
+    }
+}
+
+@media (max-width: 804px) {
+
+    .spotify_app_section121{
+        display: block;
+        /* background-color: #1f1a1a; */
+    }
+    .box1_btn{
+        font-size: 16px;
+    }
+    .box1_btn5{
+        /* display: none; */
+        width:90%;
+    }
+    
+    .box1_btn6{
+        font-size: 13px;
+        padding: 3px 13px;
+    }
+    .spotify_app_section122 h6{
+        font-size: 14px;
+    }
+    .spotify_app_section122 p{
+        font-size: 11px;
+    }
+}
+
+
+
+@media (max-width: 600px) {
+    .spotify_app_section2{
+        border: 2px solid red;
+        width: 100%;
+    }
+
+    .spotify_app_section1{
+        display: none;
+    }
+
+}
+
+@media (max-width: 400px) {
+    .spotify_app_section2{
+        /* border: 2px solid red;
+        width: 100%; */
+    }
+
+    .spotify_app_section1{
+        /* display: none; */
+    }
+    .arrow_btn{
+        /* padding: auto; */
+        /* border: 2px solid red; */
+        /* margin: 0px 0px; */
+    }
+    .search{
+        /* font-size:12px ; */
+    }
+}

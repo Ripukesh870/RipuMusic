@@ -9,4 +9,4 @@ function Spotiify() {
   )
 }
 
-export default Spotiify
+export default Spotiify;
