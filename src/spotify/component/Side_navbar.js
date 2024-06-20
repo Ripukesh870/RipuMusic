@@ -57,7 +57,7 @@ function Side_navbar() {
                 </div>
             </div>
 
-{/* show == block "" */}
+            {/* show == block "" */}
 
             <div className='Spotify_Side_nav' style={{ display: `${disp1}` }}>
                 <div className='spotify_app_box1 spotify_app_section11'>

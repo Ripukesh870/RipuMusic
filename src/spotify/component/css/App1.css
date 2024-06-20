@@ -18,6 +18,7 @@
     /* border: 2px solid rgb(11, 216, 80); */
     width: 75%;
     height: 100%;
+    border-radius: 10px;
     /* overflow: hidden; */
 }
 
@@ -99,6 +100,7 @@
     padding: 5px 15px;
     border-radius: 20px;
     color: black;
+    border: none;
 }
 
 .spotify_app_section2{
@@ -216,7 +218,7 @@
 
 @media (max-width: 600px) {
     .spotify_app_section2{
-        border: 2px solid red;
+        /* border: 2px solid red; */
         width: 100%;
     }
 
