@@ -15,4 +15,4 @@ function Forget() {
   )
 }
 
-export default Forget
+export default Forget;

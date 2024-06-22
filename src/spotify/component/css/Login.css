@@ -10,6 +10,7 @@
 
 }
 
+
 .m_logo{
     /* border: 4px solid rgb(249, 3, 3); */
     margin: 30px auto 15px;
@@ -140,6 +141,15 @@
      
 }
 
+@media  (max-width:600px){
+    .forget_main_box{
+        /* border: 2px solid red; */
+        /* height: 120%; */
+        padding-bottom: 140px;
+        /* margin-bottom: 30px; */
+    }
+
+}
 @media  (max-width:430px){
     .spotify_login_mainbox{
         /* border: 2px solid red; */
