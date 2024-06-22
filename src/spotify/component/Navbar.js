@@ -6,6 +6,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { onChange, onClickMenu } from '../Action/Index';
 // import { onSearch } from '../Action/Index';
 import MenuIcon from '@mui/icons-material/Menu';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
   const [keyword, setkeyword] = useState("");
@@ -71,7 +72,7 @@ function Navbar() {
         </div>
         <div>
           {
-            login ? <button className='nav_btn navBtn1'>Login</button> : <button className='nav_btn navBtn1'>R</button>
+            login ? <Link to="/login" className='nav_btn navBtn1' >Login</Link> : <button className='nav_btn navBtn1'>R</button>
           }
 
         </div>

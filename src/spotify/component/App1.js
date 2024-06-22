@@ -10,6 +10,9 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Navbar from './Navbar';
 import MusicSection from './MusicSection';
 import Home from './Home';
+import Login from './Login';
+import Signup from './Signup';
+import Forget from './Forget';
 // import { Home } from '@mui/icons-material';
 
 function App1() {
@@ -22,10 +25,9 @@ function App1() {
                     <Navbar />
                     <Routes>
                     <Route path='/' element={<Home />} />
-                    {/* <Route path='/adminsionprocess' element={< />} />
-                    <Route path='/feestructure' element={< />} />
-                    <Route path='/library' element={< />} /> */}
-
+                    <Route path='/login' element={<Login />} />
+                    <Route path='/signup' element={<Signup />} />
+                    <Route path='/forget' element={<Forget />} />
                 </Routes>
                 </div>
             </BrowserRouter>

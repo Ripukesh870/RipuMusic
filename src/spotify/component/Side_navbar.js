@@ -3,8 +3,10 @@ import { Add, ArrowRightAlt, Home, LibraryMusic, Search } from '@mui/icons-mater
 import { useDispatch, useSelector } from 'react-redux';
 import { onClickMenu, onSearch } from '../Action/Index';
 import CloseIcon from '@mui/icons-material/Close';
+import { useNavigate } from 'react-router-dom';
 
 function Side_navbar() {
+    const nav = useNavigate();
     const [track, settrack] = useState()
     const dispatch = useDispatch();
     const disp1 = useSelector((state) => state.onMenu);
@@ -17,9 +19,12 @@ function Side_navbar() {
         console.log("Ripukesh kumar");
         dispatch(onSearch(""));
         dispatch(onClickMenu("none"));
+        nav("/");
+
     }
 
     const handleHome = () => {
+        nav("/");
         dispatch(onSearch("none"));
         dispatch(onClickMenu("none"));
 
