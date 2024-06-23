@@ -150,6 +150,11 @@
     font-size: 29px;
 }
 
+.d_w_b:hover{
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
 @media (max-width: 1199px) {
     .box1_btn1{
         font-size: 14px;

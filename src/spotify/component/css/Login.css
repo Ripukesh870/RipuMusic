@@ -86,6 +86,7 @@
     background-color:#1ED760;
     border: none;
     padding: 3px;
+    margin: 25px 0px 6px;
 }
 
 .m_forget{
@@ -138,7 +139,7 @@
     .forget_main_box_inner{
         width: 70%;
     }
-     
+
 }
 
 @media  (max-width:600px){

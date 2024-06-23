@@ -26,3 +26,10 @@ export const onClickMenu=(keyword)=>{
     }
 }
 
+export const onLogin=(keyword)=>{
+    return {
+        type:"LOGIN",
+        payload:keyword,
+    }
+}
+
