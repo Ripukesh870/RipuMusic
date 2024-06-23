@@ -6,8 +6,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { onLogin } from '../Action/Index';
 function Login() {
   // varible
-  const email1 = "ripukesh870@gmail.com";
-  const password1 = "ripu";
+  const email1 = "abc123@gmail.com";
+  const password1 = "1234";
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const nav = useNavigate();
