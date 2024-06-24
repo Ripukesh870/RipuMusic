@@ -1,93 +1,99 @@
-// import React, { useState, useEffect } from 'react'
-// // import { PauseCircleFilled, PlayCircle } from '@mui/icons-material';
+
+// import React, { useState, useEffect } from 'react';
 // import { useSelector } from 'react-redux';
+// import datas from "./datas.json";
+// import { PauseCircleFilled, PlayCircle } from '@mui/icons-material';
 
 // function MusicSection() {
-//     const [push, setpush] = useState(true);
 //     const [tracks, setTracks] = useState([]);
 //     const mystate = useSelector((state) => state.onchanges);
-//     console.log(mystate);
+//     const [push, setpush] = useState(true);
+//     const [music, setMusic] = useState("");
+//     const [activeTrack, setActiveTrack] = useState(null);
+
+
+
 //     useEffect(() => {
-//         // Fetch music data (replace with your actual API endpoint)
 //         const fetchTracks = async () => {
 //             try {
-//                 const response = await fetch("https://v1.nocodeapi.com/ripukesh_870/spotify/fveXgbtpOkBQfwtQ/search?q=R_Music&type=track");
-//                 // const response = await fetch(`https://v1.nocodeapi.com/ripukesh_870/spotify/fveXgbtpOkBQfwtQ/search?q=${mystate}&type=track`);
-
-//                 const data = await response.json();
-//                 setTracks(data.tracks.items);
-//                 console.log(data);
-
-//                 console.log(tracks);
-
+                //         // const response = await fetch(`https://v1.nocodeapi.com/ripukesh_870/spotify/fveXgbtpOkBQfwtQ/search?q=${mystate}&type=track`);
+                //        // const data =await datas.json();
+                //        // const data = await response.json();
+                //        // setTracks(data.tracks.items);
+                //        // setTracks(datas.track.items);
+                //        // console.log(tracks);
+//                 console.log(datas.tracks.items);
+//                 setTracks(datas.tracks.items)
 //             } catch (error) {
 //                 console.error("Error fetching music data:", error);
 //             }
 //         };
-//         fetchTracks();
-//     },[]);
 
+//         if (mystate.trim() !== '') {
+//             fetchTracks();
+//         }
+//     }, [mystate]);
 
-   
+//     const handlePlay = (index) => {
+//         console.log(index);
+//         setpush(!push);
+//         setMusic(tracks[index].preview_url);
 
-//     const HandlePush = () => {
-//         setpush(prevPush => !prevPush);
 //     }
+
+
 //     return (
 //         <div className='spotyfy_home_1'>
 //             <h4 className='spotyfy_home_1_h4'>Music</h4>
-//             <div className='spotyfy_home_11'>
-//                 {
-//                     tracks.map((track, index) => (
-//                         <div key={index} className="card" style={{ width: "15rem" }}>
-//                             <img src={track.album.images[0].url} className="card-img-top" alt={track.name} />
-//                             {/* <p className='card-img-overlay'> {push ? (
-//                                 <PlayCircle style={{ fontSize: "45px", cursor: "pointer" }} onClick={HandlePush}/>
+//             <div className='spotyfy_home_11' >
+//                 {tracks.map((track, index) => (
+//                     <div key={index} className="card" style={{ width: "15rem" }}>
+//                         <img src={track.album.images[0].url} className="card-img-top" alt={track.name} />
+//                         <p className='card-img-overlay audio-controls' >
+//                             {push ? (
+//                                 <PlayCircle style={{ fontSize: "45px", cursor: "pointer" }}
+//                                     onClick={() => handlePlay(index)} />
 //                             ) : (
-//                                 <PauseCircleFilled style={{ fontSize: "45px", cursor: "pointer"}}onClick={HandlePush} />
-//                             )} </p> */}
-//                             <div className="card-body" >
-//                                 <h5 className="card-title">{track.name}</h5>
-//                                 <p className="card-text">release date: {track.album.release_date}</p>
-//                                 {/* <a href="/" className="btn btn-primary">Go somewhere</a> */}
-//                                 <audio src={track.preview_url} controls className='w-100'> </audio>
-//                             </div>
+//                                 <PauseCircleFilled style={{ fontSize: "45px", cursor: "pointer" }} onClick={() => handlePlay(index)} />
+//                             )} 
+//                         </p>
+//                         <div className="card-body">
+//                             <h5 className="card-title">{track.name}</h5>
+//                             <p className="card-text">release date: {track.album.release_date}</p>
+//                             {/* <audio src={track.preview_url} controls className='w-100'></audio> */}
 //                         </div>
-//                     ))
-//                 }
+//                     </div>
+//                 ))}
+//                 <div className='audio'>
+//                     <audio src={music} controls className='w-100'></audio>
+//                 </div>
 //             </div>
+
 //         </div>
-//     )
+//     );
 // }
 
-
-// export default MusicSection
-
+// export default MusicSection;
 
 
 
 
-
-
-
-
-
-
-
-// MusicSection.js
 import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
+import datas from "./datas.json";
+import { PauseCircleFilled, PlayCircle } from '@mui/icons-material';
 
 function MusicSection() {
     const [tracks, setTracks] = useState([]);
     const mystate = useSelector((state) => state.onchanges);
+    const [activeTrack, setActiveTrack] = useState(null);
+    const [music, setMusic] = useState("");
 
     useEffect(() => {
         const fetchTracks = async () => {
             try {
-                const response = await fetch(`https://v1.nocodeapi.com/ripukesh_870/spotify/fveXgbtpOkBQfwtQ/search?q=${mystate}&type=track`);
-                const data = await response.json();
-                setTracks(data.tracks.items);
+                console.log(datas.tracks.items);
+                setTracks(datas.tracks.items);
             } catch (error) {
                 console.error("Error fetching music data:", error);
             }
@@ -98,23 +104,62 @@ function MusicSection() {
         }
     }, [mystate]);
 
+    const handlePlay = (index) => {
+        if (index === activeTrack) {
+            setActiveTrack(null); // Pause if same track is clicked again
+            setMusic(""); // Clear music state to stop audio playback
+        } else {
+            setActiveTrack(index); // Play the clicked track
+            setMusic(tracks[index]?.preview_url); // Set the preview_url to play the audio
+
+        }
+    }
+
     return (
         <div className='spotyfy_home_1'>
             <h4 className='spotyfy_home_1_h4'>Music</h4>
             <div className='spotyfy_home_11'>
                 {tracks.map((track, index) => (
                     <div key={index} className="card" style={{ width: "15rem" }}>
-                        <img src={track.album.images[0].url} className="card-img-top" alt={track.name} />
+                        <img src={track.album.images[0]?.url} className="card-img-top" alt={track.name} />
                         <div className="card-body">
                             <h5 className="card-title">{track.name}</h5>
-                            <p className="card-text">release date: {track.album.release_date}</p>
-                            <audio src={track.preview_url} controls className='w-100'></audio>
+                            <p className="card-text">Release date: {track.album.release_date}</p>
+                            <div className="audio-controls">
+                                {activeTrack === index ? (
+                                    <PauseCircleFilled style={{ fontSize: "45px", cursor: "pointer" }} onClick={() => handlePlay(index)} />
+                                ) : (
+                                    <PlayCircle style={{ fontSize: "45px", cursor: "pointer" }} onClick={() => handlePlay(index)} />
+                                )}
+                            </div>
                         </div>
                     </div>
                 ))}
             </div>
+            {activeTrack !== null && (
+                <div className='audio'>
+                    <audio src={tracks[activeTrack]?.preview_url} controls autoPlay className='w-100'></audio>
+                </div>
+            )}
         </div>
     );
 }
 
 export default MusicSection;
+
+
+
+
+
+
+
+
+
+
+
+// const response = await fetch(`https://v1.nocodeapi.com/ripukesh_870/spotify/fveXgbtpOkBQfwtQ/search?q=${mystate}&type=track`);
+// const data =await datas.json();
+// const data = await response.json();
+// setTracks(data.tracks.items);
+// setTracks(datas.track.items);
+// console.log(tracks);
