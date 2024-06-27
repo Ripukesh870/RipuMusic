@@ -16,12 +16,12 @@
 //     useEffect(() => {
 //         const fetchTracks = async () => {
 //             try {
-                //         // const response = await fetch(`https://v1.nocodeapi.com/ripukesh_870/spotify/fveXgbtpOkBQfwtQ/search?q=${mystate}&type=track`);
-                //        // const data =await datas.json();
-                //        // const data = await response.json();
-                //        // setTracks(data.tracks.items);
-                //        // setTracks(datas.track.items);
-                //        // console.log(tracks);
+//         // const response = await fetch(`https://v1.nocodeapi.com/ripukesh_870/spotify/fveXgbtpOkBQfwtQ/search?q=${mystate}&type=track`);
+//        // const data =await datas.json();
+//        // const data = await response.json();
+//        // setTracks(data.tracks.items);
+//        // setTracks(datas.track.items);
+//        // console.log(tracks);
 //                 console.log(datas.tracks.items);
 //                 setTracks(datas.tracks.items)
 //             } catch (error) {
@@ -78,6 +78,10 @@
 
 
 
+
+
+
+
 import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import datas from "./datas.json";
@@ -89,11 +93,24 @@ function MusicSection() {
     const [activeTrack, setActiveTrack] = useState(null);
     const [music, setMusic] = useState("");
 
+    
+
     useEffect(() => {
         const fetchTracks = async () => {
             try {
-                console.log(datas.tracks.items);
-                setTracks(datas.tracks.items);
+                // console.log(datas.tracks.items);
+                // setTracks(datas.tracks.items);
+                if(mystate === "" || mystate === "R_Music"){
+                    setTracks(datas.tracks.items);
+                    // const val=datas.tracks.items;
+                    // console.log(val);
+                } else {
+                    const filteredTracks = datas.tracks.items.filter(track => track.name.toLowerCase().includes(mystate.toLowerCase()))
+                    setTracks(filteredTracks);
+
+                }
+
+                
             } catch (error) {
                 console.error("Error fetching music data:", error);
             }
@@ -106,11 +123,11 @@ function MusicSection() {
 
     const handlePlay = (index) => {
         if (index === activeTrack) {
-            setActiveTrack(null); // Pause if same track is clicked again
-            setMusic(""); // Clear music state to stop audio playback
+            setActiveTrack(null);
+            setMusic("");
         } else {
-            setActiveTrack(index); // Play the clicked track
-            setMusic(tracks[index]?.preview_url); // Set the preview_url to play the audio
+            setActiveTrack(index); 
+            setMusic(tracks[index]?.preview_url); 
 
         }
     }
@@ -120,6 +137,7 @@ function MusicSection() {
             <h4 className='spotyfy_home_1_h4'>Music</h4>
             <div className='spotyfy_home_11'>
                 {tracks.map((track, index) => (
+                    
                     <div key={index} className="card" style={{ width: "15rem" }}>
                         <img src={track.album.images[0]?.url} className="card-img-top" alt={track.name} />
                         <div className="card-body">
@@ -136,6 +154,7 @@ function MusicSection() {
                     </div>
                 ))}
             </div>
+
             {activeTrack !== null && (
                 <div className='audio'>
                     <audio src={tracks[activeTrack]?.preview_url} controls autoPlay className='w-100'></audio>

@@ -19,6 +19,7 @@ function Navbar() {
 
   const handleinput = (e) => {
     const newKeyword = e.target.value;
+    // console.log(newKeyword);
     setkeyword(newKeyword);
     dispatch(onChange(newKeyword));
   }

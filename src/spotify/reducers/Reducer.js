@@ -15,6 +15,8 @@
 
 // Reducer.js
 const initialState = "R_Music";
+// const initialState = "";
+
 
 const onchanges = (state = initialState, action) => {
     switch (action.type) {
