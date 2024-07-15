@@ -57,8 +57,8 @@ function Side_navbar() {
                         <button className='box1_btn box1_btn1'  ><LibraryMusic className='libraryMusic' /> Your Library</button>
                         <button className='box1_btn box1_btn5' ><Add sx={{ background: "#1f1e1e", color: "white", fontSize: "25px", marginRight: "10px" }} />  <ArrowRightAlt sx={{ background: "#1f1e1e", color: "white", fontSize: "25px" }} /> </button>
                     </div>
-                    {/* {
-                        value ?
+                    {
+                        value  === null?
                            
                             <>
                                 <div className='spotify_app_section122'>
@@ -83,16 +83,17 @@ function Side_navbar() {
                                 }
                             </div>
                             
-                    } */}
+                    }
 
-                    {
-                        value.value ?
+                    {/* {
+                        value.value  ?
                             value.value.map((track, index) => (
                                 <div className='bookmark_box' key={index}>
                                     <img src={track.album.images[0]?.url} alt="" />
                                     <p>{track.name}</p>
                                 </div>
                             ))
+                            
                             :
                             <>
                                 <div className='spotify_app_section122'>
@@ -106,7 +107,7 @@ function Side_navbar() {
                                     <button className='box1_btn6'>Browse Podcast</button>
                                 </div>
                             </>
-                    }
+                    } */}
                 </div>
             </div>
     
