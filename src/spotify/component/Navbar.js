@@ -14,6 +14,7 @@ function Navbar() {
   const disp = useSelector((state) => state.Search);
   const disp1 = useSelector((state) => state.onMenu);
   const isLoggedIn = useSelector(state => state.LogIn);
+  
   const dispatch = useDispatch();
   const nav=useNavigate();
 

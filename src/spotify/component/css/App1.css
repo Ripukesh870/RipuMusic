@@ -90,11 +90,17 @@
     /* border: 2px solid red; */
     border-radius: 10px;
     background-color: #393737;
-    margin: 14px 0px;
+    margin: 14px 0px;    
+    height: auto;
+    max-height: 300px;
+    /* max-height: 500px; */
+    overflow-y: scroll;
+
 }
 .spotify_app_section122 p{
     font-size: 13px;
 }
+
 .box1_btn6{
     /* border: 2px solid red; */
     padding: 5px 15px;
@@ -155,6 +161,33 @@
     font-size: 18px;
     font-weight: bold;
 }
+
+.bookmark_box{
+    border: 2px solid rgb(94, 92, 92);
+    display: flex;
+    margin: 5px 0px;
+    padding: 5px;
+}
+
+.bookmark_box img{
+    /* border: 2px solid blue; */
+    width: 20% ;
+    height: 50px ;
+    margin: 2px;
+}
+.bookmark_box p{
+    /* border: 2px solid green; */
+    /* padding: 5px 10px; */
+    padding: 10px;
+    width: 80%;
+    height: 50px;
+    margin: auto 0px;
+    font-size: medium;
+    overflow: hidden;
+    text-wrap: nowrap;
+    /* overflow-x: hidden; */
+}
+
 @media (max-width: 1199px) {
     .box1_btn1{
         font-size: 14px;

@@ -33,3 +33,24 @@ export const onLogin=(keyword)=>{
     }
 }
 
+// export const bookmark=(trackval,index)=>{
+//     return {
+//         type:"BOOKMARK",
+//         plyload:{trackval,index}
+//     }
+// }
+
+// export const bookmark = (trackval, index) => {
+//     return {
+//         type: "BOOKMARK",
+//         payload: { trackval, index }
+//     };
+// };
+
+
+export const bookmark = (value) => {
+    return {
+        type: "BOOKMARK",
+        payload: value
+    };
+};
